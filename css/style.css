@@ -1,0 +1,242 @@
+/* Сброс свойств CSS */
+*,
+html,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: normal;
+  
+  background-color: rgb(26, 29, 39);
+}
+
+
+/* Стили для главного контейнера */
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  max-width: 1770px;
+}
+
+.form-container {
+  display: flex; 
+  width: 400px;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(33, 36, 49);
+  border-radius: 30px;
+}
+
+
+.form__input{
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 300px;
+  color:aliceblue;
+  border-radius: 6px;
+  border: 1px solid rgb(59, 63, 79);
+  background-color: rgb(42, 45, 55);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.form__input:hover{
+  background-color: rgb(24, 27, 35);
+}
+
+.form__input:focus{
+  border-color: aliceblue;
+  background-color: rgb(45, 50, 65);
+}
+
+.form__button{
+  width: 300px;
+  height: 100px;
+  color:aliceblue;
+  border: 1px solid rgb(59, 63, 79);
+  border-radius: 6px;
+  background-color: rgb(59, 63, 79);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__button:hover{
+  background-color: rgb(24, 27, 35);
+}
+
+.form__button:active{
+  background-color: rgb(29, 34, 46);
+}
+
+.game__container {
+  display: flex; 
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 36, 49);
+  border-radius: 30px;
+}
+
+.game__title, .form__title{
+  margin-bottom: 14px;
+  font-size: 36px;
+  text-align: center;
+  color: aliceblue;
+  user-select: none;
+}
+
+.card__container{
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card__button{
+  border: 3px solid rgb(41, 48, 62);
+  border-radius: 5px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  user-select: none;
+}
+
+.inside-button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card__button-front{
+  background-color: rgb(31, 34, 45);
+  background-image: url("../images/logo.webp");
+  background-size:contain;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.card__button-front:hover{
+  background-color: rgb(24, 27, 35);
+}
+
+.card__button-back{
+  background-size: cover;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.game__timer{
+  text-align: center;
+  color: aliceblue;
+  font-size: 26px;
+  user-select: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex; 
+    width: auto;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(31, 34, 45);
+    text-align: center;
+    background-color:aliceblue;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content{
+  margin-bottom: 30px;
+}
+
+.modal-image{
+  margin-bottom: 30px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.modal-butthon{
+  padding: 10px;
+  color:aliceblue;
+  background-color: rgb(59, 63, 79);
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.modal-butthon:hover{
+  background-color: rgb(24, 27, 35);
+}
+
+.modal-butthon:active{
+  background-color: rgb(29, 34, 46);
+}
